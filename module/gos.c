@@ -3,6 +3,7 @@
 
 #define PCPU_NUM 10
 #define MAX_QUOTA(period) (PCPU_NUM * period)
+
 #define INTERVAL 3000
 
 #define DRIVER_DESC "Guarantee of SLA (GoS)"
