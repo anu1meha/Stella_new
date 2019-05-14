@@ -77,6 +77,7 @@ struct gos_vm_sla {
 	/* 
 	 * SLA info
 	 * SLA : 100.00% = 10000
+	 
 	 */
 	unsigned long prev_sla;
 	unsigned long now_sla;
