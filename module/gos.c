@@ -237,8 +237,11 @@ static int gos_vm_info_show(struct seq_file *m, void *v)
 	int int_sla, flt_sla;
 	char *vm_name, *sla_option;
 	int i = 0;
+	long cpu_quota;
+	unsigned long iops, bandwidth, latency, pps;
+
 	
-	seq_puts(m, "VM_NAME\tSLO Option\tSLO Value\tSLO Percentage\n");
+	seq_puts(m, "VM_NAME\tSLO Option\tSLO Value\tSLO Percentage\tCPU quota\tDisk-IOPS\tDisk-Bandwidth\tDisk-Latency\tPPS\n");
 
 	for(i = 0 ; i < VM_NUM ; i++)
 	{
