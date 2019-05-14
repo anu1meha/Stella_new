@@ -26,6 +26,7 @@ void ires_work_func(void * data)
 
 static DECLARE_WORK(ires_work, ires_work_func);
 
+
 static int calculate_vcpu_quota(int before)
 {
 	int after;
