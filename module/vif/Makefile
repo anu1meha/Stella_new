@@ -17,5 +17,3 @@ clean:
 	@rm -rf modules.order
 	@rm -rf Module.symvers
 	@rm -rf .tmp_versions
-
-
