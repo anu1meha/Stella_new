@@ -123,7 +123,7 @@ void feedback_controller(unsigned long elapsed_time)
 			now_cpu_time = curr_sla->now_cpu_time * 1000 / HZ;
 			/* 100.00% = 10000, gos_interval is 3s*/
 			vm_cpu_util = (now_cpu_time - prev_cpu_time) * 10000 / (gos_interval / 1000000);
-			gos_vm_list[i]->now_perf.cpu_usage = vm_cpu_util;
+			
 
 			printk("gos: before now_sla: %lu, prev_sla: %lu\n", now_sla, prev_sla);
 			printk("gos: before now_quota: %ld, prev_quota: %ld\n", now_quota, prev_quota);
