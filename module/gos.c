@@ -267,10 +267,14 @@ static int gos_vm_info_show(struct seq_file *m, void *v)
 				int_sla = curr_sla->now_sla / 100;
 				flt_sla = curr_sla->now_sla % 100;
 				sla_option = curr_sla->sla_option;
+				cpu_quota = curr_sla->cpu_quota;
+				iops = gos_vm_list[i]->now_perf.iops;
+				bandwidth = gos_vm_list[i]->now_perf.bandwidth;
+				latency = gos_vm_list[i]->now_perf.latency;
+				pps = gos_vm_list[i]->now_perf.credit;
 
-				seq_printf(m, "%s\t%s\t%d\t%d.%d\n", vm_name, sla_option, 
-					sla_value, int_sla, flt_sla);
-
+				seq_printf(m, "%s\t%s\t%d\t%d.%d\t%d\t%lu\t%lu\t%lu\t%lu\n", vm_name, sla_option,
+					sla_value, int_sla, flt_sla, cpu_quota, iops, bandwidth, latency, pps);
 
 			}
 		}
